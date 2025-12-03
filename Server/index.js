@@ -1,8 +1,9 @@
 import express from 'express';
+import cors from 'cors';
 import dotenv from 'dotenv';
 import connectDB from "./config/db.js";
-const taskroutes = require('./routes/taskroutes');
-const errorhandles = require('./middleware/errorhandles');
+import taskroute from './routes/taskroute.js';
+import errorhandles from "./middleware/errorhandles.js"; // no curly braces
 
 const app = express();
 dotenv.config();
@@ -15,7 +16,7 @@ app.use(cors());
 app.use(express.json()); 
 
 // Routes
-app.use('/api/tasks', taskroutes);
+app.use('/api/tasks', taskroute);
 
 // Error handler middleware
 app.use(errorhandles);
