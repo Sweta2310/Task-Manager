@@ -7,7 +7,7 @@ updateTask,
 deleteTask
 } from '../controller/taskcontroller.js';
 
-import { validateTask } from "../middlewares/validateTask.js";
+import { validateTask } from "../middleware/validatetask.js";
 
 const router = express.Router();
 

@@ -1,0 +1,160 @@
+:root {
+  --accent: #2563eb;
+  --muted: #6b7280;
+  --bg: #f8fafc;
+}
+
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial;
+  background: var(--bg);
+  color: #111;
+}
+
+/* LAYOUT */
+.container {
+  max-width: 1000px;
+  margin: 28px auto;
+  padding: 18px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center all children horizontally */
+}
+
+/* HEADER */
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+/* CARDS */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+  padding: 16px;
+  width: 100%;
+  max-width: 600px; /* keeps card centered and not too wide */
+}
+
+/* TASK ITEM */
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #eef3ff;
+  background: linear-gradient(180deg, #fff, #fbfdff);
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+/* BUTTONS */
+.btn {
+  background: var(--accent);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background: #1d4ed8;
+}
+
+.btn.ghost {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid rgba(37, 99, 235, 0.12);
+}
+
+/* FORM ELEMENTS */
+.row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.input,
+textarea,
+select {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #e6eef8;
+  min-width: 0;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+/* BADGES & TEXT */
+.small-muted {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.badge {
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+/* SEARCHBAR */
+.search-bar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+  width: 100%;
+  max-width: 600px; /* same as cards */
+}
+
+/* PAGINATION */
+.pagination {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  justify-content: center; /* center pagination buttons */
+  width: 100%;
+}
+
+/* ERROR TEXT */
+.error {
+  color: #b91c1c;
+  font-size: 13px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 640px) {
+  .row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-bar {
+    flex-direction: column;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+}

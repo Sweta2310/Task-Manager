@@ -8,12 +8,12 @@ const taskSchema = new Schema({
     },
     description: {
         type: String,
-        required: true
+        required: false
     },
     status: {
         type: String,
-        enum: ['pending', 'in-progress', 'completed'],
-        default: 'pending'
+        enum: ['To do', 'In progress', 'Done'],
+        default: 'To do'
     },
     createdAt: {
         type: Date,
